@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.container {
+    background: white;
+    min-width: 320px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #26df5d, #2712e7);
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+label {
+    font-family: "Poppins", sans-serif;
+
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(to right, #26df5d, #2712e7);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, #26df5d, #2712e7);
+}
+
+.enviar {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(to right, #26df5d, #2712e7);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.enviar:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, #26df5d, #2712e7);
+}
+
+.bntCriarConta {
+    margin-top: 1rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(to right, #33333300, #a5a5a500);
+    cursor: pointer;
+    color: #19191a;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.bntCriarConta:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, #26df5d36, #2712e733);
+}
+
+.underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #26df5d, #2712e7);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+
+
+nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(to right, #26df5d, #2712e7);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+nav .logo {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    text-shadow:5px 5px 15px rgba(0, 0, 0, 0.466);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active {
+    background: linear-gradient(to left, #0000001e, #0000001a);
+}
+
+nav ul li a:hover {
+    background: linear-gradient(to right, #00000077, #0000006b);
+}
+
+nav .menu-btn i {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 920px) {
+    nav .menu-btn i {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: linear-gradient(to right, #26df5d, #2712e7);
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    nav ul.open {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    nav ul li a {
+        font-size: 23px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: #fff9f2;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    width: 60%;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.card {
+    aspect-ratio: 3/4;
+    width: 70%;
+    border-radius: 5px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+    background-color: #ccc;
+    margin: 2%;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #079909;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-image: url('../images/back.png');
+    backface-visibility: hidden;
+}
+
+.reveal-card {
+    transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+.cardGame {
+    margin: 3%;
+    height: 10%;
+    width: 25%;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game button {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 50px;
+    background: linear-gradient(45deg, #26df5d9c, #2712e79a);
+    border-style: ridge;
+}
+
+.game button:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, #26df5d9c, #2712e79a);
+}
+
+.contentVelha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+
+}
+
+.cardsJogo {
+    justify-content: center;
+    display: flex;
+}
+
+img.velha {
+    height: 110%;
+}
+
+
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+}
+
+.card {
+    border: 1px solid black;
+    background-color: white;
+    padding: .5rem;
+}
+
+.card>.header {
+    margin-bottom: .25rem;
+}
+
+.card>.body {
+    font-size: .8rem;
+    color: #777;
+}
+
+.hide {
+    display: none;
+}
+.tempo {
+    background: rgba(123, 255, 0, 0.137);
+    width: 13%;
+    height: 3%;
+    padding: 0.3rem;
+    box-shadow: 5px 5px 15px rgba(0, 0,0, 0.3);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+p{
+    color: white;
+    font-size: 75px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    text-shadow:5px 5px 15px rgba(0, 0, 0, 0.466);
+}
+p::before {
+    content: '';
+    position: absolute;
+    height: 13px;
+    width: 300px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0,0, 0.466);
+    background: linear-gradient(45deg, #1900ff, #00ff4c);
+}
